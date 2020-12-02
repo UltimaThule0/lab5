@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-$db = mysqli_connect("localhost", "f0491495_games", "12345", "f0491495_games")or die("Невозможно подключиться к серверу");
+$db = mysqli_connect("localhost", "root", "root1", "maks")or die("Невозможно подключиться к серверу");
 mysqli_query($db, "SET NAMES utf8");
 ?>
 
@@ -92,5 +92,8 @@ mysqli_query($db, "SET NAMES utf8");
     echo "<a href = 'laba5-7.php'>Новый ключ</a>";
     ?>
     </br></br>
+    <p> <a href = "laba5pdf.php"> Таблица PDF </a>
+        </br></br>
+    <p> <a href = "laba5xls.php"> Таблица Excel </a>
 </body> 
 </html>
