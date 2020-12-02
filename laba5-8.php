@@ -12,10 +12,10 @@
 $db = mysqli_connect("localhost", "f0491495_games", "12345", "f0491495_games")or die("Невозможно подключиться к серверу");
 mysqli_query($db, "SET NAMES utf8");
 
-$rows = mysqli_query($db, "SELECT g_name, g_janr, g_razrab, g_izdat, g_prodazh FROM games WHERE id=".$_GET['id']);
+$rows = mysqli_query($db, "SELECT g_name, g_janr, g_razrab, g_izdat, g_prodazh FROM games WHERE id=".$_GET['id_game']);
 
 while ($st = mysqli_fetch_array($rows)) {
-    $id = $_GET['id'];
+    $id = $_GET['id_game'];
     $name = $st['g_name'];
     $janr = $st['g_janr'];
     $razrab = $st['g_razrab'];
